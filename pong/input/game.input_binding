@@ -1,0 +1,12 @@
+key_trigger {
+  input: KEY_W
+  action: "left_up"
+}
+key_trigger {
+  input: KEY_S
+  action: "left_down"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "touch"
+}
