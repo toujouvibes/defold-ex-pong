@@ -1,5 +1,5 @@
-local left_up = hash("left_up")
-local left_down = hash("left_down")
+go.property("up_action", hash("left_up"))
+go.property("down_action", hash("left_down"))
 
 local obj_speed = 5
 
@@ -20,9 +20,9 @@ end
 function on_input(self, action_id, action)
 	local next_position = go.get_position()
 	
-	if action_id == left_up then
+	if action_id == self.up_action then
 		next_position.y = math.min(next_position.y + obj_speed, self.game_height - self.object_height / 2)
-	elseif action_id == left_down then
+	elseif action_id == self.down_action then
 		next_position.y = math.max(next_position.y - obj_speed, self.object_height / 2)
 	end
 	

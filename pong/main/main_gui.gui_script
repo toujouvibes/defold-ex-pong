@@ -1,0 +1,16 @@
+local UPDATE_LEFT = hash("update_left")
+local UPDATE_RIGHT = hash("update_right")
+
+local function update_score(id, score)
+	local node= go.get_node(id)
+	gui.animate(node, "color.w", 0, gui.EASING_LINEAR, 0.5, 0, nil, gui.PLAYBACK_ONCE_PINGPONG)
+	gui.set_text(node, score)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id = UPDATE_LEFT then
+
+	elseif message_id = UPDATE_RIGHT then
+
+	end
+end
